@@ -9,7 +9,7 @@ const categories = [
     key: "ai",
     slug: "ai",
     title: "AI",
-    description: "Shaping how people understand, trust, and work alongside AI — from onboarding flows to tooling that makes AI-assisted work feel natural.",
+    description: "Building tools for privacy, accessibility, and evaluation—improving safety, clarity, and quality of AI-generated product experiences. ",
     projects: ["Internal AI tooling", "Meta AI"],
   },
   {
