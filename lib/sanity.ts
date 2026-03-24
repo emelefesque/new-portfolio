@@ -37,7 +37,45 @@ export const projectsQuery = `
     slug,
     company,
     heroImage { asset, alt },
+    category,
     order
+  }
+`;
+
+export const projectsByCategoryQuery = `
+  *[_type == "project" && category == $category] | order(order asc) {
+    _id,
+    title,
+    subtitle,
+    slug,
+    company,
+    heroImage { asset, alt },
+    overview,
+    impact,
+    category,
+    order
+  }
+`;
+
+export const workCategoryQuery = `
+  *[_type == "workCategory" && key == $key][0] {
+    _id,
+    key,
+    title,
+    description,
+    heroProject-> {
+      _id,
+      title,
+      subtitle,
+      slug,
+      company,
+      role,
+      year,
+      heroImage { asset, alt },
+      overview,
+      impact,
+      category
+    }
   }
 `;
 

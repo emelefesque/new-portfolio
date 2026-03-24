@@ -23,6 +23,8 @@ export interface WhatShipped {
   imageAlt?: string;
 }
 
+export type WorkCategoryKey = "ai" | "productContent" | "systemsDesign";
+
 export interface Project {
   _id: string;
   _type: "project";
@@ -41,7 +43,16 @@ export interface Project {
   whatShipped?: WhatShipped;
   impact: string[];
   learnings: string[];
+  category?: WorkCategoryKey;
   order: number;
+}
+
+export interface WorkCategory {
+  _id: string;
+  key: WorkCategoryKey;
+  title: string;
+  description?: string;
+  heroProject?: Project;
 }
 
 export interface Post {
@@ -70,7 +81,7 @@ export interface SiteSettings {
 // For list views (lighter type without full body content)
 export type ProjectCard = Pick<
   Project,
-  "_id" | "title" | "subtitle" | "slug" | "company" | "heroImage" | "order"
+  "_id" | "title" | "subtitle" | "slug" | "company" | "heroImage" | "order" | "category"
 >;
 
 export type PostCard = Pick<

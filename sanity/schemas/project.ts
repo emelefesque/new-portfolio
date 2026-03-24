@@ -121,6 +121,19 @@ export default defineType({
       of: [{ type: "string" }],
     }),
     defineField({
+      name: "category",
+      title: "Category",
+      type: "string",
+      options: {
+        list: [
+          { title: "AI", value: "ai" },
+          { title: "Product Content", value: "productContent" },
+          { title: "Systems Design", value: "systemsDesign" },
+        ],
+        layout: "radio",
+      },
+    }),
+    defineField({
       name: "order",
       title: "Display order",
       type: "number",
