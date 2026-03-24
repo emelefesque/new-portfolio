@@ -6,6 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 const defaultSkills = [
   "AI model training",
   "Data governance",
+  "Product content",
   "Voice & tone",
   "Design systems",
   "Content standards",
