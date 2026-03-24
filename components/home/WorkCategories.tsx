@@ -16,7 +16,7 @@ const categories = [
     key: "productContent",
     slug: "product-content",
     title: "Product content",
-    description: "Writing and systems that reduce friction, prevent errors, and help people do what they came to do — at scale, across surfaces.",
+    description: "Writing and systems that reduce friction, prevent errors, and help people do what they came to do, at scale and across surfaces.",
     projects: ["Ads duplication", "GDPR response"],
   },
   {
