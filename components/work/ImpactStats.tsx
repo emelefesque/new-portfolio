@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
+import ImageLightbox from "@/components/ui/ImageLightbox";
 import type { Project } from "@/lib/types";
 import { urlFor } from "@/lib/sanity";
 
@@ -14,24 +16,16 @@ interface ImpactStatsProps {
 export default function ImpactStats({ project }: ImpactStatsProps) {
   const hasWhatShipped =
     project.whatShipped?.description || project.whatShipped?.image?.asset;
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const [lightboxAlt, setLightboxAlt] = useState("");
 
   return (
     <section className="max-w-3xl mx-auto px-6">
-      {/* What shipped */}
+      {/* What shipped — description only (image moves below impact) */}
       {hasWhatShipped && (
         <>
           <SectionLabel>What shipped</SectionLabel>
           <div className="mt-4 mb-12">
-            {project.whatShipped?.image?.asset && (
-              <div className="relative aspect-[16/9] overflow-hidden border border-[rgba(242,227,213,0.1)] bg-[#0E1826] mb-6">
-                <Image
-                  src={urlFor(project.whatShipped.image).width(800).height(450).url()}
-                  alt={project.whatShipped.image.alt || "What shipped"}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            )}
             {project.whatShipped?.description && (
               <p className="text-[rgba(242,227,213,0.75)] text-sm leading-relaxed">
                 {project.whatShipped.description}
@@ -65,6 +59,35 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
           </ul>
           <Divider />
         </>
+      )}
+
+      {/* What shipped image — below impact */}
+      {project.whatShipped?.image?.asset && (
+        <div className="mb-12">
+          <div
+            className="border border-[rgba(242,227,213,0.1)] bg-[#0E1826] cursor-zoom-in"
+            onClick={() => {
+              setLightboxSrc(urlFor(project.whatShipped!.image!).width(1400).url());
+              setLightboxAlt(project.whatShipped!.image!.alt || "What shipped");
+            }}
+          >
+            <Image
+              src={urlFor(project.whatShipped.image).width(1200).url()}
+              alt={project.whatShipped.image.alt || "What shipped"}
+              width={1200}
+              height={900}
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
+      )}
+
+      {lightboxSrc && (
+        <ImageLightbox
+          src={lightboxSrc}
+          alt={lightboxAlt}
+          onClose={() => setLightboxSrc(null)}
+        />
       )}
 
       {/* Learnings */}
