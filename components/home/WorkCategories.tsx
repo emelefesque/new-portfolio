@@ -9,22 +9,22 @@ const categories = [
     key: "ai",
     slug: "ai",
     title: "AI",
-    description: "Building tools for privacy, accessibility, and evaluation—improving safety, clarity, and quality of AI-generated product experiences. ",
-    projects: ["Internal AI tooling", "Meta AI"],
+    description: "Improving safety, clarity, and quality of AI-generated product experiences with tools that Building for privacy, accessibility, and evaluation.",
+    projects: ["Accessibility bot", "Privacy and integrity linting"],
   },
   {
     key: "productContent",
     slug: "product-content",
     title: "Product content",
     description: "Writing and systems that reduce friction, prevent errors, and help people do what they came to do, at scale and across surfaces.",
-    projects: ["Ads duplication", "GDPR response"],
+    projects: ["Ads duplication", "Meta brand voice"],
   },
   {
     key: "systemsDesign",
     slug: "systems-design",
     title: "Systems design",
     description: "Frameworks, naming conventions, and governance structures that give teams the consistency to move fast without breaking things.",
-    projects: ["Icon library", "Meta brand voice"],
+    projects: ["Icon library", "GDPR response"],
   },
 ];
 
