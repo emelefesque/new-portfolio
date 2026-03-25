@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { notFound } from "next/navigation";
 import { client, projectBySlugQuery, projectsQuery } from "@/lib/sanity";
 import type { Project, ProjectCard } from "@/lib/types";

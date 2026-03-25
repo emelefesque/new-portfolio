@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { client, workCategoryQuery, projectsByCategoryQuery } from "@/lib/sanity";
 import type { WorkCategory, Project } from "@/lib/types";
 import CategoryPage from "@/components/work/CategoryPage";
