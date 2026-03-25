@@ -29,14 +29,14 @@ const fallbackCategory: WorkCategory = {
 
 const fallbackOtherProjects: Project[] = [
   {
-    _id: "gdpr-response",
+    _id: "meta-brand-voice",
     _type: "project",
-    title: "GDPR response",
-    subtitle: "Redesigning privacy controls for regulators, users, and press",
-    slug: { current: "gdpr-response" },
-    company: "Meta / Facebook",
+    title: "Meta brand voice",
+    subtitle: "A voice and tone framework for 5,000+ writers and designers",
+    slug: { current: "meta-brand-voice" },
+    company: "Meta",
     role: "Content Designer",
-    year: "2018",
+    year: "",
     overview: "",
     goal: "",
     challenges: [],
@@ -44,7 +44,7 @@ const fallbackOtherProjects: Project[] = [
     process: [],
     impact: [],
     learnings: [],
-    order: 2,
+    order: 6,
   },
 ];
 

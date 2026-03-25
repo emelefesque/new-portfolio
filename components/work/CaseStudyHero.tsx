@@ -1,9 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import type { Project } from "@/lib/types";
-import { urlFor } from "@/lib/sanity";
 
 interface CaseStudyHeroProps {
   project: Project;
@@ -12,27 +10,6 @@ interface CaseStudyHeroProps {
 export default function CaseStudyHero({ project }: CaseStudyHeroProps) {
   return (
     <div className="pt-24">
-      {/* Full-bleed hero image */}
-      <div className="relative w-full aspect-[21/9] bg-[#0E1826] overflow-hidden">
-        {project.heroImage?.asset ? (
-          <Image
-            src={urlFor(project.heroImage).width(1400).height(600).url()}
-            alt={project.heroImage.alt || project.title}
-            fill
-            priority
-            className="object-cover"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a0a0c] via-[#0E1826] to-[#0D0D0D] flex items-center justify-center">
-            <span className="font-serif text-[8rem] font-bold text-[rgba(166,81,88,0.15)] leading-none">
-              {project.title.slice(0, 2).toUpperCase()}
-            </span>
-          </div>
-        )}
-        {/* Fade bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0D0D0D] to-transparent" />
-      </div>
-
       {/* Header content */}
       <div className="max-w-3xl mx-auto px-6 py-12">
         {/* Metadata bar */}
