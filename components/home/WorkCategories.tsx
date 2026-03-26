@@ -31,7 +31,7 @@ const categories = [
     slug: "people-leadership",
     title: "People & culture leadership",
     description: "Building and nurturing teams to drive innovation and deliver impactful work.",
-    projects: ["Team growth initiatives", "Mentorship programs"],
+    projects: ["Comma Con", "AI learning curriculum "],
   },
 ];
 export default function WorkCategories() {
