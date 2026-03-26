@@ -25,7 +25,7 @@ const categories = [
     key: "systemsDesign",
     slug: "systems-design",
     title: "Systems design",
-    description: "Frameworks, naming conventions, and governance structures that give teams the consistency to move fast without breaking things.",
+    description: "Creating frameworks, naming conventions, and governance structures that give teams the confidence to move fast without breaking things.",
     projects: ["Icon library", "GDPR response"],
     hidden: false,
   },
