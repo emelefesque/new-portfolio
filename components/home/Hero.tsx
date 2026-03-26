@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 const defaultBio =
-  "I make products better by embedding human-centered principles into AI systems, establishing governance frameworks, and aligning teams to operationalize responsible design at scale. Previously at Meta and Square (Block).";
+  "I make products better by embedding I make products better by applying human-centered design to complex technologies, helping teams set guardrails and scale responsible practices in real-world systems. Previously at Meta and Square (Block).-centered principles into AI systems, establishing governance frameworks, and aligning teams to operationalize responsible design at scale. Previously at Meta and Square (Block).";
 
 export default function Hero({ bio, resumeUrl }: HeroProps) {
   return (
