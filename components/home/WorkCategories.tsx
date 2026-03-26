@@ -11,6 +11,7 @@ const categories = [
     title: "AI",
     description: "Improving safety, clarity, and quality of AI-generated product experiences with tools that Building for privacy, accessibility, and evaluation.",
     projects: ["Content risk classification engine", "Accessibility bot"],
+    hidden: false,
   },
   {
     key: "productContent",
@@ -18,6 +19,7 @@ const categories = [
     title: "Product content",
     description: "Writing and systems that reduce friction, prevent errors, and help people do what they came to do, at scale and across surfaces.",
     projects: ["Ads duplication", "Meta brand voice"],
+    hidden: false,
   },
   {
     key: "systemsDesign",
@@ -25,6 +27,7 @@ const categories = [
     title: "Systems design",
     description: "Frameworks, naming conventions, and governance structures that give teams the consistency to move fast without breaking things.",
     projects: ["Icon library", "GDPR response"],
+    hidden: false,
   },
   {
     key: "peopleLeadership",
@@ -32,6 +35,7 @@ const categories = [
     title: "People & culture leadership",
     description: "Building and nurturing teams to drive innovation and deliver impactful work.",
     projects: ["Comma Con", "AI learning curriculum "],
+    hidden: false,
   },
 ];
 export default function WorkCategories() {
@@ -51,7 +55,7 @@ export default function WorkCategories() {
         <div className="h-px bg-[rgba(242,227,213,0.12)] mb-12" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {categories.map((cat, i) => (
+          {categories.filter((cat) => !cat.hidden).map((cat, i) => (
             <motion.div
               key={cat.key}
               initial={{ opacity: 0, y: 24 }}

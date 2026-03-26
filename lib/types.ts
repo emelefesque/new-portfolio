@@ -44,6 +44,7 @@ export interface Project {
   impact: string[];
   learnings: string[];
   category?: WorkCategoryKey;
+  hidden?: boolean;
   order: number;
 }
 

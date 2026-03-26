@@ -30,7 +30,7 @@ export function urlFor(source: SanityImage) {
 // ─── GROQ queries ──────────────────────────────────────────────
 
 export const projectsQuery = `
-  *[_type == "project"] | order(order asc) {
+  *[_type == "project" && hidden != true] | order(order asc) {
     _id,
     title,
     subtitle,
@@ -43,7 +43,7 @@ export const projectsQuery = `
 `;
 
 export const projectsByCategoryQuery = `
-  *[_type == "project" && category == $category] | order(order asc) {
+  *[_type == "project" && category == $category && hidden != true] | order(order asc) {
     _id,
     title,
     subtitle,
@@ -106,6 +106,7 @@ export const projectBySlugQuery = `
     },
     impact,
     learnings,
+    hidden,
     order
   }
 `;

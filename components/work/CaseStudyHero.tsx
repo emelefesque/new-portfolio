@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Project } from "@/lib/types";
+import Link from "next/link";
+import type { Project, WorkCategoryKey } from "@/lib/types";
+
+const categoryMap: Record<WorkCategoryKey, { label: string; slug: string }> = {
+  ai: { label: "AI", slug: "ai" },
+  productContent: { label: "Product content", slug: "product-content" },
+  systemsDesign: { label: "Systems design", slug: "systems-design" },
+  peopleLeadership: { label: "People & Culture Leadership", slug: "people-leadership" },
+};
 
 interface CaseStudyHeroProps {
   project: Project;
@@ -12,6 +20,24 @@ export default function CaseStudyHero({ project }: CaseStudyHeroProps) {
     <div className="pt-24">
       {/* Header content */}
       <div className="max-w-3xl mx-auto px-6 py-12">
+        {/* Breadcrumb */}
+        {project.category && categoryMap[project.category] && (
+          <motion.div
+            className="flex items-center gap-2 text-[0.65rem] tracking-[0.12em] uppercase mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Link
+              href={`/work/${categoryMap[project.category].slug}`}
+              className="text-[#A65158] hover:underline"
+            >
+              {categoryMap[project.category].label}
+            </Link>
+            <span className="text-[rgba(242,227,213,0.3)]">→</span>
+            <span className="text-[rgba(242,227,213,0.4)]">{project.title}</span>
+          </motion.div>
+        )}
         {/* Metadata bar */}
         <motion.div
           className="flex flex-wrap gap-6 mb-8 text-[0.7rem] tracking-[0.12em] uppercase text-[rgba(242,227,213,0.4)]"

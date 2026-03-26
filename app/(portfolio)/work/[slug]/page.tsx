@@ -109,6 +109,8 @@ export default async function WorkPage({ params }: PageProps) {
     // Sanity not connected — use fallback
   }
 
+  if (project?.hidden) notFound();
+
   if (!project) {
     const fallback = fallbackData[slug];
     if (!fallback) notFound();

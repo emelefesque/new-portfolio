@@ -135,6 +135,13 @@ export default defineType({
       },
     }),
     defineField({
+      name: "hidden",
+      title: "Hide this project",
+      type: "boolean",
+      description: "When enabled, this project won't appear on the site and its page will return a 404.",
+      initialValue: false,
+    }),
+    defineField({
       name: "order",
       title: "Display order",
       type: "number",
