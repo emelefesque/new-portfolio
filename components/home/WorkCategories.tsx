@@ -10,7 +10,7 @@ const categories = [
     slug: "ai",
     title: "AI",
     description: "Improving safety, clarity, and quality of AI-generated product experiences with tools that Building for privacy, accessibility, and evaluation.",
-    projects: ["Accessibility bot", "Privacy and integrity linting"],
+    projects: ["Content risk classification engine", "Accessibility bot"],
   },
   {
     key: "productContent",
@@ -27,7 +27,6 @@ const categories = [
     projects: ["Icon library", "GDPR response"],
   },
 ];
-
 export default function WorkCategories() {
   return (
     <section id="work" className="py-24 px-6">
