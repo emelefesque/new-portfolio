@@ -23,7 +23,7 @@ export interface WhatShipped {
   imageAlt?: string;
 }
 
-export type WorkCategoryKey = "ai" | "productContent" | "systemsDesign";
+export type WorkCategoryKey = "ai" | "productContent" | "systemsDesign" | "peopleLeadership";
 
 export interface Project {
   _id: string;
