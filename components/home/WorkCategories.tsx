@@ -26,6 +26,13 @@ const categories = [
     description: "Frameworks, naming conventions, and governance structures that give teams the consistency to move fast without breaking things.",
     projects: ["Icon library", "GDPR response"],
   },
+  {
+    key: "peopleLeadership",
+    slug: "people-leadership",
+    title: "People & culture leadership",
+    description: "Building and nurturing teams to drive innovation and deliver impactful work.",
+    projects: ["Team growth initiatives", "Mentorship programs"],
+  },
 ];
 export default function WorkCategories() {
   return (

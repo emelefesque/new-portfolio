@@ -14,6 +14,7 @@ export default defineType({
           { title: "AI", value: "ai" },
           { title: "Product Content", value: "productContent" },
           { title: "Systems Design", value: "systemsDesign" },
+          { title: "People & Culture Leadership", value: "peopleLeadership" },
         ],
         layout: "radio",
       },
