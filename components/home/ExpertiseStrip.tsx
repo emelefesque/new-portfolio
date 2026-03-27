@@ -34,7 +34,7 @@ export default function ExpertiseStrip({ skills }: ExpertiseStripProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: i * 0.05 }}
-              className="px-4 py-2 border border-[rgba(242,227,213,0.15)] text-sm text-[rgba(242,227,213,0.7)] hover:border-[#A65158] hover:text-[#F2E3D5] transition-colors cursor-default"
+              className="px-4 py-2 bg-[rgba(242,227,213,0.06)] text-sm text-[rgba(242,227,213,0.6)] cursor-default"
             >
               {skill}
             </motion.span>
