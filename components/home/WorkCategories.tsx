@@ -10,7 +10,7 @@ const categories = [
     slug: "ai",
     title: "AI",
     description: "Improving safety, clarity, and quality of AI-generated product experiences for privacy, accessibility, and evaluation.",
-    projects: ["Content risk classification engine", "Accessibility bot"],
+    projects: ["Content risk classification engine", "AI learning curriculum"],
     hidden: false,
   },
   {
