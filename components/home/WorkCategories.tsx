@@ -35,7 +35,7 @@ const categories = [
     title: "People & culture leadership",
     description: "Building and nurturing teams to drive innovation and deliver impactful work.",
     projects: ["Comma Con", "AI learning curriculum "],
-    hidden: false,
+    hidden: true,
   },
 ];
 export default function WorkCategories() {
