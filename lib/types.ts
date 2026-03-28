@@ -17,6 +17,13 @@ export interface ProcessStep {
   image?: SanityImage;
 }
 
+export interface ExplorationRow {
+  _key: string;
+  approach: string;
+  outcome: string;
+  worked: boolean;
+}
+
 export interface WhatShipped {
   description: string;
   image?: SanityImage;
@@ -44,6 +51,11 @@ export interface Project {
   impact: string[];
   learnings: string[];
   category?: WorkCategoryKey;
+  context?: string;
+  criticalMoment?: string;
+  explorationTable?: ExplorationRow[];
+  positioning?: string;
+  reflection?: string;
   hidden?: boolean;
   order: number;
 }

@@ -121,6 +121,53 @@ export default defineType({
       of: [{ type: "string" }],
     }),
     defineField({
+      name: "context",
+      title: "Context",
+      type: "text",
+      rows: 4,
+      description: "Background explanation shown before the overview grid. E.g., explains the 3-layer ad system.",
+    }),
+    defineField({
+      name: "criticalMoment",
+      title: "Critical moment",
+      type: "text",
+      rows: 2,
+      description: "A short callout displayed in a highlighted box. E.g., 'I was asked to write 60+ error messages — but this revealed a deeper issue.'",
+    }),
+    defineField({
+      name: "explorationTable",
+      title: "Exploration table",
+      type: "array",
+      description: "Comparison table of approaches tried. Each row: approach, outcome, and whether it worked.",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "approach", title: "Approach", type: "string" },
+            { name: "outcome", title: "Outcome", type: "string" },
+            { name: "worked", title: "Worked?", type: "boolean", initialValue: false },
+          ],
+          preview: {
+            select: { title: "approach", subtitle: "outcome" },
+          },
+        },
+      ],
+    }),
+    defineField({
+      name: "positioning",
+      title: "Positioning",
+      type: "text",
+      rows: 4,
+      description: "A 'Why this matters' paragraph about design approach philosophy.",
+    }),
+    defineField({
+      name: "reflection",
+      title: "Reflection",
+      type: "text",
+      rows: 5,
+      description: "Paragraph-form reflection, richer than the learnings bullet list.",
+    }),
+    defineField({
       name: "category",
       title: "Category",
       type: "string",

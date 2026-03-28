@@ -4,9 +4,12 @@ import { notFound } from "next/navigation";
 import { client, projectBySlugQuery, projectsQuery } from "@/lib/sanity";
 import type { Project, ProjectCard } from "@/lib/types";
 import CaseStudyHero from "@/components/work/CaseStudyHero";
+import CaseStudyContext from "@/components/work/CaseStudyContext";
 import OverviewGrid from "@/components/work/OverviewGrid";
+import ExplorationTable from "@/components/work/ExplorationTable";
 import ProcessSteps from "@/components/work/ProcessSteps";
 import ImpactStats from "@/components/work/ImpactStats";
+import CaseStudyReflection from "@/components/work/CaseStudyReflection";
 import Link from "next/link";
 
 interface PageProps {
@@ -138,11 +141,22 @@ export default async function WorkPage({ params }: PageProps) {
   return (
     <article>
       <CaseStudyHero project={project} />
+      <CaseStudyContext
+        context={project.context}
+        criticalMoment={project.criticalMoment}
+      />
       <OverviewGrid project={project} />
+      {project.explorationTable && project.explorationTable.length > 0 && (
+        <ExplorationTable rows={project.explorationTable} />
+      )}
       {project.process && project.process.length > 0 && (
         <ProcessSteps steps={project.process} />
       )}
       <ImpactStats project={project} />
+      <CaseStudyReflection
+        positioning={project.positioning}
+        reflection={project.reflection}
+      />
 
       {/* Back link */}
       <div className="max-w-3xl mx-auto px-6 pb-24">

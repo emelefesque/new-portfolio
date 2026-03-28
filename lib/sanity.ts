@@ -106,6 +106,16 @@ export const projectBySlugQuery = `
     },
     impact,
     learnings,
+    context,
+    criticalMoment,
+    explorationTable[] {
+      _key,
+      approach,
+      outcome,
+      worked
+    },
+    positioning,
+    reflection,
     hidden,
     order
   }
