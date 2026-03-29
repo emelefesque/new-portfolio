@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PortableText } from "next-sanity";
 import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
@@ -15,7 +16,7 @@ interface ImpactStatsProps {
 
 export default function ImpactStats({ project }: ImpactStatsProps) {
   const hasWhatShipped =
-    project.whatShipped?.description || project.whatShipped?.image?.asset;
+    project.whatShipped?.description?.length || project.whatShipped?.image?.asset;
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const [lightboxAlt, setLightboxAlt] = useState("");
 
@@ -26,10 +27,35 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
         <>
           <SectionLabel>What shipped</SectionLabel>
           <div className="mt-4 mb-12">
-            {project.whatShipped?.description && (
-              <p className="text-[rgba(242,227,213,0.75)] text-sm leading-relaxed">
-                {project.whatShipped.description}
-              </p>
+            {project.whatShipped?.description && project.whatShipped.description.length > 0 && (
+              <PortableText
+                value={project.whatShipped.description}
+                components={{
+                  block: {
+                    normal: ({ children }: { children?: React.ReactNode }) => (
+                      <p className="text-[rgba(242,227,213,0.75)] text-sm leading-relaxed mb-3 last:mb-0">{children}</p>
+                    ),
+                  },
+                  list: {
+                    bullet: ({ children }: { children?: React.ReactNode }) => (
+                      <ul className="space-y-2 mb-3 ml-2">{children}</ul>
+                    ),
+                  },
+                  listItem: {
+                    bullet: ({ children }: { children?: React.ReactNode }) => (
+                      <li className="flex items-start gap-2 text-[rgba(242,227,213,0.75)] text-sm leading-relaxed">
+                        <span className="text-[#A65158] mt-0.5 shrink-0">·</span>
+                        {children}
+                      </li>
+                    ),
+                  },
+                  marks: {
+                    strong: ({ children }: { children?: React.ReactNode }) => (
+                      <strong className="font-semibold text-[#F2E3D5]">{children}</strong>
+                    ),
+                  },
+                } as Parameters<typeof PortableText>[0]["components"]}
+              />
             )}
           </div>
           <Divider />

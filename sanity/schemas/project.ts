@@ -98,7 +98,7 @@ export default defineType({
       title: "What shipped",
       type: "object",
       fields: [
-        { name: "description", title: "Description", type: "text", rows: 2 },
+        { name: "description", title: "Description", type: "array", of: [{ type: "block", styles: [{ title: "Normal", value: "normal" }], lists: [{ title: "Bullet", value: "bullet" }], marks: { decorators: [{ title: "Bold", value: "strong" }], annotations: [] } }] },
         {
           name: "image",
           title: "Image",

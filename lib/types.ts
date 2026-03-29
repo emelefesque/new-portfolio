@@ -26,7 +26,7 @@ export interface ExplorationRow {
 }
 
 export interface WhatShipped {
-  description: string;
+  description?: PortableTextBlock[];
   image?: SanityImage;
   imageAlt?: string;
 }
