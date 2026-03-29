@@ -109,6 +109,23 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "solutionComponents",
+      title: "Solution components",
+      description: "2–3 column breakdown of solution components shown below What shipped.",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "title", title: "Title", type: "string" },
+            { name: "description", title: "Description", type: "text", rows: 2 },
+            { name: "bullets", title: "Bullet points", type: "array", of: [{ type: "string" }] },
+          ],
+          preview: { select: { title: "title", subtitle: "description" } },
+        },
+      ],
+    }),
+    defineField({
       name: "impact",
       title: "Impact / outcomes",
       type: "array",

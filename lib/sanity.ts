@@ -104,6 +104,12 @@ export const projectBySlugQuery = `
       description,
       image { asset, alt }
     },
+    solutionComponents[] {
+      _key,
+      title,
+      description,
+      bullets
+    },
     impact,
     learnings,
     context,

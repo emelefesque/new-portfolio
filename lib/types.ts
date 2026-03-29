@@ -18,6 +18,13 @@ export interface ProcessStep {
   image?: SanityImage;
 }
 
+export interface SolutionComponent {
+  _key: string;
+  title: string;
+  description?: string;
+  bullets?: string[];
+}
+
 export interface ExplorationRow {
   _key: string;
   approach: string;
@@ -52,6 +59,7 @@ export interface Project {
   impact: string[];
   learnings: string[];
   category?: WorkCategoryKey;
+  solutionComponents?: SolutionComponent[];
   context?: PortableTextBlock[];
   criticalMoment?: PortableTextBlock[];
   explorationTable?: ExplorationRow[];
