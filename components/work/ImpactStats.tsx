@@ -9,6 +9,7 @@ import Divider from "@/components/ui/Divider";
 import ImageLightbox from "@/components/ui/ImageLightbox";
 import type { Project } from "@/lib/types";
 import { urlFor } from "@/lib/sanity";
+import SolutionColumns from "@/components/work/SolutionColumns";
 
 interface ImpactStatsProps {
   project: Project;
@@ -60,6 +61,11 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
           </div>
           <Divider />
         </>
+      )}
+
+      {/* Solution components — below What shipped */}
+      {project.solutionComponents && project.solutionComponents.length > 0 && (
+        <SolutionColumns items={project.solutionComponents} />
       )}
 
       {/* Impact */}

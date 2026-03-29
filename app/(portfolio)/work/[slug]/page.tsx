@@ -9,7 +9,6 @@ import OverviewGrid from "@/components/work/OverviewGrid";
 import ExplorationTable from "@/components/work/ExplorationTable";
 import ProcessSteps from "@/components/work/ProcessSteps";
 import ImpactStats from "@/components/work/ImpactStats";
-import SolutionColumns from "@/components/work/SolutionColumns";
 import CaseStudyReflection from "@/components/work/CaseStudyReflection";
 import Link from "next/link";
 
@@ -151,9 +150,6 @@ export default async function WorkPage({ params }: PageProps) {
         <ProcessSteps steps={project.process} />
       )}
       <ImpactStats project={project} />
-      {project.solutionComponents && project.solutionComponents.length > 0 && (
-        <SolutionColumns items={project.solutionComponents} />
-      )}
       <CaseStudyReflection
         positioning={project.positioning}
         reflection={project.reflection}
