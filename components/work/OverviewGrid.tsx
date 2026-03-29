@@ -1,15 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { PortableText } from "next-sanity";
+import type { PortableTextBlock } from "next-sanity";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
 import type { Project } from "@/lib/types";
 
 interface OverviewGridProps {
   project: Project;
+  criticalMoment?: PortableTextBlock[];
 }
 
-export default function OverviewGrid({ project }: OverviewGridProps) {
+export default function OverviewGrid({ project, criticalMoment }: OverviewGridProps) {
   return (
     <section className="max-w-3xl mx-auto px-6">
       {project.overview && (
@@ -22,6 +25,32 @@ export default function OverviewGrid({ project }: OverviewGridProps) {
         >
           {project.overview}
         </motion.p>
+      )}
+
+      {criticalMoment && criticalMoment.length > 0 && (
+        <motion.div
+          className="mb-10 border-l-2 border-[#A65158] bg-[rgba(166,81,88,0.08)] px-5 py-4"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <PortableText
+            value={criticalMoment}
+            components={{
+              block: {
+                normal: ({ children }: { children?: React.ReactNode }) => (
+                  <p className="text-[#F2E3D5] text-base italic leading-relaxed mb-3 last:mb-0">{children}</p>
+                ),
+              },
+              marks: {
+                strong: ({ children }: { children?: React.ReactNode }) => (
+                  <strong className="font-semibold">{children}</strong>
+                ),
+              },
+            } as Parameters<typeof PortableText>[0]["components"]}
+          />
+        </motion.div>
       )}
 
       <Divider />
