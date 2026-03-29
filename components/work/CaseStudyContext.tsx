@@ -42,18 +42,19 @@ export default function CaseStudyContext({ context, criticalMoment }: CaseStudyC
 
   return (
     <section className="max-w-3xl mx-auto px-6">
-      <SectionLabel>Context</SectionLabel>
-
       {context && context.length > 0 && (
-        <motion.div
-          className="mt-4"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <PortableText value={context} components={ptComponents as Parameters<typeof PortableText>[0]["components"]} />
-        </motion.div>
+        <>
+          <SectionLabel>Context</SectionLabel>
+          <motion.div
+            className="mt-4"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <PortableText value={context} components={ptComponents as Parameters<typeof PortableText>[0]["components"]} />
+          </motion.div>
+        </>
       )}
 
       {criticalMoment && criticalMoment.length > 0 && (
@@ -62,7 +63,7 @@ export default function CaseStudyContext({ context, criticalMoment }: CaseStudyC
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: context?.length ? 0.1 : 0 }}
         >
           <PortableText value={criticalMoment} components={{
             ...ptComponents,

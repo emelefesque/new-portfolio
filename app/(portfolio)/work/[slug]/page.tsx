@@ -143,9 +143,11 @@ export default async function WorkPage({ params }: PageProps) {
       <CaseStudyHero project={project} />
       <CaseStudyContext
         context={project.context}
-        criticalMoment={project.criticalMoment}
       />
       <OverviewGrid project={project} />
+      <CaseStudyContext
+        criticalMoment={project.criticalMoment}
+      />
       {project.explorationTable && project.explorationTable.length > 0 && (
         <ExplorationTable rows={project.explorationTable} />
       )}
