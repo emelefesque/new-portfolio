@@ -34,7 +34,7 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
                 components={{
                   block: {
                     normal: ({ children }: { children?: React.ReactNode }) => (
-                      <p className="text-[rgba(242,227,213,0.75)] text-sm leading-relaxed mb-3 last:mb-0">{children}</p>
+                      <p className="text-[rgba(242,227,213,0.8)] text-lg leading-relaxed mb-3 last:mb-0">{children}</p>
                     ),
                   },
                   list: {
@@ -44,7 +44,7 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
                   },
                   listItem: {
                     bullet: ({ children }: { children?: React.ReactNode }) => (
-                      <li className="flex items-start gap-2 text-[rgba(242,227,213,0.75)] text-sm leading-relaxed">
+                      <li className="flex items-start gap-2 text-[rgba(242,227,213,0.8)] text-lg leading-relaxed">
                         <span className="text-[#A65158] mt-0.5 shrink-0">·</span>
                         {children}
                       </li>
