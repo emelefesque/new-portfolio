@@ -1,4 +1,5 @@
 import type { PortableTextBlock } from "next-sanity";
+export type { PortableTextBlock };
 
 export interface SanityImage {
   _type: "image";
@@ -51,11 +52,11 @@ export interface Project {
   impact: string[];
   learnings: string[];
   category?: WorkCategoryKey;
-  context?: string;
-  criticalMoment?: string;
+  context?: PortableTextBlock[];
+  criticalMoment?: PortableTextBlock[];
   explorationTable?: ExplorationRow[];
-  positioning?: string;
-  reflection?: string;
+  positioning?: PortableTextBlock[];
+  reflection?: PortableTextBlock[];
   hidden?: boolean;
   order: number;
 }
