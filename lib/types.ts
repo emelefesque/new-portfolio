@@ -18,6 +18,14 @@ export interface ProcessStep {
   image?: SanityImage;
 }
 
+export interface EdgeCase {
+  _key: string;
+  type?: string;
+  title: string;
+  description?: PortableTextBlock[];
+  image?: SanityImage;
+}
+
 export interface SolutionComponent {
   _key: string;
   title: string;
@@ -59,6 +67,7 @@ export interface Project {
   impact: string[];
   learnings: string[];
   category?: WorkCategoryKey;
+  edgeCases?: EdgeCase[];
   figmaEmbedUrl?: string;
   solutionComponents?: SolutionComponent[];
   context?: PortableTextBlock[];

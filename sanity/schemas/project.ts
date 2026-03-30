@@ -109,6 +109,49 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "edgeCases",
+      title: "Edge cases & tradeoffs",
+      type: "array",
+      description: "Decision points, edge cases, and stakeholder tradeoffs worth highlighting.",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "type",
+              title: "Type",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Edge case", value: "Edge case" },
+                  { title: "Stakeholder tradeoff", value: "Stakeholder tradeoff" },
+                  { title: "Decision", value: "Decision" },
+                ],
+                layout: "radio",
+              },
+            },
+            { name: "title", title: "Title", type: "string" },
+            {
+              name: "description",
+              title: "Description",
+              type: "array",
+              of: [{ type: "block", styles: [{ title: "Normal", value: "normal" }], lists: [{ title: "Bullet", value: "bullet" }], marks: { decorators: [{ title: "Bold", value: "strong" }], annotations: [] } }],
+            },
+            {
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: { hotspot: true },
+              fields: [{ name: "alt", title: "Alt text", type: "string" }],
+            },
+          ],
+          preview: {
+            select: { title: "title", subtitle: "type" },
+          },
+        },
+      ],
+    }),
+    defineField({
       name: "figmaEmbedUrl",
       title: "Figma prototype URL",
       type: "url",
