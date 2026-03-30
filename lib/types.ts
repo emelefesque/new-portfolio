@@ -59,6 +59,7 @@ export interface Project {
   impact: string[];
   learnings: string[];
   category?: WorkCategoryKey;
+  figmaEmbedUrl?: string;
   solutionComponents?: SolutionComponent[];
   context?: PortableTextBlock[];
   criticalMoment?: PortableTextBlock[];

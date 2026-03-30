@@ -104,6 +104,7 @@ export const projectBySlugQuery = `
       description,
       image { asset, alt }
     },
+    figmaEmbedUrl,
     solutionComponents[] {
       _key,
       title,

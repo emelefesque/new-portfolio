@@ -9,6 +9,7 @@ import OverviewGrid from "@/components/work/OverviewGrid";
 import ExplorationTable from "@/components/work/ExplorationTable";
 import ProcessSteps from "@/components/work/ProcessSteps";
 import ImpactStats from "@/components/work/ImpactStats";
+import FigmaEmbed from "@/components/work/FigmaEmbed";
 import CaseStudyReflection from "@/components/work/CaseStudyReflection";
 import Link from "next/link";
 
@@ -149,6 +150,7 @@ export default async function WorkPage({ params }: PageProps) {
       {project.process && project.process.length > 0 && (
         <ProcessSteps steps={project.process} />
       )}
+      {project.figmaEmbedUrl && <FigmaEmbed url={project.figmaEmbedUrl} />}
       <ImpactStats project={project} />
       <CaseStudyReflection
         positioning={project.positioning}

@@ -109,6 +109,12 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "figmaEmbedUrl",
+      title: "Figma prototype URL",
+      type: "url",
+      description: "Paste the embed URL from Figma (the src value from the iframe embed code, starting with https://embed.figma.com/...).",
+    }),
+    defineField({
       name: "solutionComponents",
       title: "Solution components",
       description: "2–3 column breakdown of solution components shown below What shipped.",
