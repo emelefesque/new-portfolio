@@ -68,32 +68,7 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
         <SolutionColumns items={project.solutionComponents} />
       )}
 
-      {/* Impact */}
-      {project.impact && project.impact.length > 0 && (
-        <>
-          <SectionLabel>Impact</SectionLabel>
-          <ul className="mt-4 space-y-3 mb-12">
-            {project.impact.map((item, i) => (
-              <motion.li
-                key={i}
-                className="flex items-start gap-3 border border-[rgba(242,227,213,0.1)] bg-[#0E1826] px-5 py-4"
-                initial={{ opacity: 0, x: -12 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: i * 0.06 }}
-              >
-                <span className="text-[#A65158] font-bold mt-px shrink-0">→</span>
-                <span className="text-[rgba(242,227,213,0.85)] text-sm leading-relaxed">
-                  {item}
-                </span>
-              </motion.li>
-            ))}
-          </ul>
-          <Divider />
-        </>
-      )}
-
-      {/* What shipped image — below impact */}
+      {/* What shipped image */}
       {project.whatShipped?.image?.asset && (
         <div className="mb-12">
           <div
