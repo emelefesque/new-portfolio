@@ -2,9 +2,8 @@ import { client, settingsQuery } from "@/lib/sanity";
 import type { SiteSettings } from "@/lib/types";
 import Hero from "@/components/home/Hero";
 import ExpertiseStrip from "@/components/home/ExpertiseStrip";
-import FeaturedWork from "@/components/home/FeaturedWork";
-import WorkCategories from "@/components/home/WorkCategories";
 import HowIWork from "@/components/home/HowIWork";
+import WorkCategories from "@/components/home/WorkCategories";
 
 async function getData() {
   try {
@@ -22,9 +21,8 @@ export default async function HomePage() {
     <>
       <Hero bio={settings?.bio} resumeUrl={settings?.resumeFile?.asset?.url} />
       <ExpertiseStrip skills={settings?.skills} />
-      <FeaturedWork />
-      <WorkCategories />
       <HowIWork />
+      <WorkCategories />
     </>
   );
 }
