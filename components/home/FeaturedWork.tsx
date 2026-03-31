@@ -13,7 +13,7 @@ const featured = [
     featured: true,
   },
   {
-    slug: "content-risk-content-risk-classification-engine",
+    slug: "content-risk-classification-engine",
     title: "Content risk classification",
     subtitle: "Building a content risk engine to improve safety and quality",
     category: "AI",
