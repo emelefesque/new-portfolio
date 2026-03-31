@@ -73,10 +73,10 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
             >
               <Link
                 href={`/work/${project.slug.current}`}
-                className="group grid grid-cols-1 md:grid-cols-2 md:h-[480px] border border-[rgba(242,227,213,0.08)] hover:border-[#A65158] bg-[#0E1826] transition-colors duration-300 overflow-hidden"
+                className="group grid grid-cols-1 md:grid-cols-2 border border-[rgba(242,227,213,0.08)] hover:border-[#A65158] bg-[#0E1826] transition-colors duration-300 overflow-hidden"
               >
                 {/* Left: text + at a glance */}
-                <div className="p-8 md:p-10 flex flex-col gap-6 md:overflow-hidden">
+                <div className="p-8 md:p-10 flex flex-col gap-6">
                   <div>
                     {project.category && (
                       <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#A65158] mb-3 block">
@@ -136,22 +136,24 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
                   </span>
                 </div>
 
-                {/* Right: image */}
-                <div className="relative min-h-[280px] bg-[#0a1120]">
-                  {project.heroImage?.asset ? (
-                    <Image
-                      src={urlFor(project.heroImage).width(900).url()}
-                      alt={project.heroImage.alt || project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-[rgba(242,227,213,0.08)] text-sm tracking-widest uppercase">
-                        {project.title}
-                      </span>
-                    </div>
-                  )}
+                {/* Right: image — fixed height, centered, independent of left content */}
+                <div className="flex items-center justify-center bg-[#0a1120] p-6">
+                  <div className="relative w-full h-72">
+                    {project.heroImage?.asset ? (
+                      <Image
+                        src={urlFor(project.heroImage).width(900).url()}
+                        alt={project.heroImage.alt || project.title}
+                        fill
+                        className="object-contain"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-[rgba(242,227,213,0.08)] text-sm tracking-widest uppercase">
+                          {project.title}
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </Link>
             </motion.div>
