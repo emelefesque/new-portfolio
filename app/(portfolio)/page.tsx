@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { client, settingsQuery, featuredProjectsQuery } from "@/lib/sanity";
 import type { SiteSettings } from "@/lib/types";
 import Hero from "@/components/home/Hero";
