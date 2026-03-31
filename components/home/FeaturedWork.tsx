@@ -21,7 +21,7 @@ const featured = [
   },
   {
     slug: "cross-system-transitions",
-    title: "Cross-app transitions",
+    title: "Cross-system transitions",
     subtitle: "A framework for navigating between apps without losing context",
     category: "Systems design",
     featured: false,
