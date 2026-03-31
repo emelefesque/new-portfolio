@@ -6,21 +6,21 @@ import SectionLabel from "@/components/ui/SectionLabel";
 
 const featured = [
   {
-    slug: "ads-duplication",
+    slug: "ad-duplication",
     title: "Ads duplication",
     subtitle: "Reducing error states to increase revenue",
     category: "Product content",
     featured: true,
   },
   {
-    slug: "content-risk-classification",
+    slug: "content-risk-content-risk-classification-engine",
     title: "Content risk classification",
     subtitle: "Building a content risk engine to improve safety and quality",
     category: "AI",
     featured: false,
   },
   {
-    slug: "cross-app-transitions",
+    slug: "cross-system-transitions",
     title: "Cross-app transitions",
     subtitle: "A framework for navigating between apps without losing context",
     category: "Systems design",
