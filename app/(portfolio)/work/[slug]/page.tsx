@@ -9,6 +9,7 @@ import OverviewGrid from "@/components/work/OverviewGrid";
 import ExplorationTable from "@/components/work/ExplorationTable";
 import ProcessSteps from "@/components/work/ProcessSteps";
 import ImpactStats from "@/components/work/ImpactStats";
+import ImageCarousel from "@/components/work/ImageCarousel";
 import EdgeCases from "@/components/work/EdgeCases";
 import FigmaEmbed from "@/components/work/FigmaEmbed";
 import CaseStudyReflection from "@/components/work/CaseStudyReflection";
@@ -150,6 +151,9 @@ export default async function WorkPage({ params }: PageProps) {
       )}
       {project.process && project.process.length > 0 && (
         <ProcessSteps steps={project.process} />
+      )}
+      {project.imageCarousel && project.imageCarousel.length > 0 && (
+        <ImageCarousel slides={project.imageCarousel} />
       )}
       {project.edgeCases && project.edgeCases.length > 0 && (
         <EdgeCases items={project.edgeCases} />

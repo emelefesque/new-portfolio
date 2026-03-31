@@ -104,6 +104,12 @@ export const projectBySlugQuery = `
       description,
       image { asset, alt }
     },
+    imageCarousel[] {
+      _key,
+      image { asset, alt },
+      title,
+      description
+    },
     edgeCases[] {
       _key,
       type,

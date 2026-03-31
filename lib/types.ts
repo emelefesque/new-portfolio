@@ -18,6 +18,13 @@ export interface ProcessStep {
   image?: SanityImage;
 }
 
+export interface CarouselSlide {
+  _key: string;
+  image?: SanityImage;
+  title?: string;
+  description?: PortableTextBlock[];
+}
+
 export interface EdgeCase {
   _key: string;
   type?: string;
@@ -67,6 +74,7 @@ export interface Project {
   impact: string[];
   learnings: string[];
   category?: WorkCategoryKey;
+  imageCarousel?: CarouselSlide[];
   edgeCases?: EdgeCase[];
   figmaEmbedUrl?: string;
   solutionComponents?: SolutionComponent[];

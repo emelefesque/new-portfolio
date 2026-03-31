@@ -109,6 +109,36 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "imageCarousel",
+      title: "Image carousel",
+      type: "array",
+      description: "A walkthrough of design iterations — each slide has an image, title, and description.",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: { hotspot: true },
+              fields: [{ name: "alt", title: "Alt text", type: "string" }],
+            },
+            { name: "title", title: "Title", type: "string" },
+            {
+              name: "description",
+              title: "Description",
+              type: "array",
+              of: [{ type: "block", styles: [{ title: "Normal", value: "normal" }], lists: [{ title: "Bullet", value: "bullet" }], marks: { decorators: [{ title: "Bold", value: "strong" }], annotations: [] } }],
+            },
+          ],
+          preview: {
+            select: { title: "title", media: "image" },
+          },
+        },
+      ],
+    }),
+    defineField({
       name: "edgeCases",
       title: "Edge cases & tradeoffs",
       type: "array",
