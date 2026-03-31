@@ -72,7 +72,7 @@ export default function ImageCarousel({ slides }: ImageCarouselProps) {
             >
               {slide.image?.asset ? (
                 <div
-                  className="cursor-zoom-in"
+                  className="relative h-72 cursor-zoom-in"
                   onClick={() => {
                     setLightboxSrc(urlFor(slide.image!).width(1400).url());
                     setLightboxAlt(slide.image!.alt || slide.title || "");
@@ -81,13 +81,12 @@ export default function ImageCarousel({ slides }: ImageCarouselProps) {
                   <Image
                     src={urlFor(slide.image).width(1200).url()}
                     alt={slide.image.alt || slide.title || ""}
-                    width={1200}
-                    height={800}
-                    style={{ width: "100%", height: "auto" }}
+                    fill
+                    className="object-contain"
                   />
                 </div>
               ) : (
-                <div className="aspect-video flex items-center justify-center">
+                <div className="h-72 flex items-center justify-center">
                   <span className="text-[rgba(242,227,213,0.2)] text-sm">No image</span>
                 </div>
               )}
