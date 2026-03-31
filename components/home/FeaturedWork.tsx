@@ -17,14 +17,14 @@ const featured = [
     title: "Content risk classification engine",
     subtitle: "Building a content risk engine to improve safety and quality",
     category: "AI",
-    featured: false,
+    featured: true,
   },
   {
     slug: "cross-system-transitions",
     title: "Cross-system transitions",
     subtitle: "A framework for navigating between apps without losing context",
     category: "Systems design",
-    featured: false,
+    featured: true,
   },
 ];
 
