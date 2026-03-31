@@ -29,6 +29,25 @@ export function urlFor(source: SanityImage) {
 
 // ─── GROQ queries ──────────────────────────────────────────────
 
+export const featuredProjectsQuery = `
+  *[_type == "project" && slug.current in $slugs && hidden != true] {
+    _id,
+    title,
+    subtitle,
+    slug,
+    company,
+    role,
+    year,
+    heroImage { asset, alt },
+    overview,
+    goal,
+    challenges,
+    solution,
+    impact,
+    category
+  }
+`;
+
 export const projectsQuery = `
   *[_type == "project" && hidden != true] | order(order asc) {
     _id,
