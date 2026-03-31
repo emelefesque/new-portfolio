@@ -50,7 +50,7 @@ export default function WorkCategories() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          A sampling of projects I&apos;m proud of
+          Other projects to explore
         </motion.h2>
         <div className="h-px bg-[rgba(242,227,213,0.12)] mb-12" />
 
