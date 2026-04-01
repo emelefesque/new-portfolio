@@ -57,11 +57,11 @@ export default function CategoryHeroProject({ project }: CategoryHeroProjectProp
         {/* Key outcomes */}
         {project.impact && project.impact.length > 0 && (
           <div className="mb-8">
-            <p className="text-[0.65rem] tracking-[0.12em] uppercase text-[#A65158] mb-3">Key outcomes</p>
+            <p className="text-[0.65rem] tracking-[0.12em] uppercase text-[#C0707A] mb-3">Key outcomes</p>
             <ul className="space-y-2">
               {project.impact.slice(0, 3).map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-[rgba(242,227,213,0.7)]">
-                  <span className="text-[#A65158] shrink-0 mt-px">→</span>
+                  <span className="text-[#C0707A] shrink-0 mt-px">→</span>
                   {item}
                 </li>
               ))}

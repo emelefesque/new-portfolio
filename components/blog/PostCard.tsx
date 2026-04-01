@@ -52,7 +52,7 @@ export default function PostCard({ post, index = 0 }: PostCardProps) {
               {post.excerpt}
             </p>
           )}
-          <span className="inline-block mt-3 text-xs text-[#A65158] tracking-wide group-hover:underline">
+          <span className="inline-block mt-3 text-xs text-[#C0707A] tracking-wide group-hover:underline">
             Read more →
           </span>
         </div>

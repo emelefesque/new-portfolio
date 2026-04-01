@@ -50,7 +50,7 @@ const components = {
   listItem: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
       <li className="flex items-start gap-2 text-[rgba(242,227,213,0.8)] text-sm leading-relaxed">
-        <span className="text-[#A65158] mt-0.5 shrink-0">·</span>
+        <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
         {children}
       </li>
     ),
@@ -72,7 +72,7 @@ const components = {
         href={value?.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[#A65158] underline underline-offset-2 hover:text-[#D9AFA0] transition-colors"
+        className="text-[#C0707A] underline underline-offset-2 hover:text-[#D9AFA0] transition-colors"
       >
         {children}
       </a>

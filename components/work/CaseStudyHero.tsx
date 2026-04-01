@@ -30,7 +30,7 @@ export default function CaseStudyHero({ project }: CaseStudyHeroProps) {
           >
             <Link
               href={`/work/${categoryMap[project.category].slug}`}
-              className="text-[#A65158] hover:underline"
+              className="text-[#C0707A] hover:underline"
             >
               {categoryMap[project.category].label}
             </Link>

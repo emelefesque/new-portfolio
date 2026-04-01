@@ -19,9 +19,9 @@ export default function ExplorationTable({ rows }: ExplorationTableProps) {
       <div className="mt-4 border border-[rgba(242,227,213,0.1)] overflow-hidden">
         {/* Header */}
         <div className="grid grid-cols-[1fr_1fr_3rem] bg-[#0E1826] border-b border-[rgba(242,227,213,0.1)] px-4 py-2">
-          <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#A65158]">Approach</span>
-          <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#A65158]">Outcome</span>
-          <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#A65158]"></span>
+          <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#C0707A]">Approach</span>
+          <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#C0707A]">Outcome</span>
+          <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#C0707A]"></span>
         </div>
 
         {/* Rows */}
@@ -36,7 +36,7 @@ export default function ExplorationTable({ rows }: ExplorationTableProps) {
           >
             <span className="text-sm text-[rgba(242,227,213,0.8)]">{row.approach}</span>
             <span className="text-sm text-[rgba(242,227,213,0.6)]">{row.outcome}</span>
-            <span className={`text-base font-bold text-center ${row.worked ? "text-[#A65158]" : "text-[rgba(242,227,213,0.2)]"}`}>
+            <span className={`text-base font-bold text-center ${row.worked ? "text-[#C0707A]" : "text-[rgba(242,227,213,0.2)]"}`}>
               {row.worked ? "✓" : "✗"}
             </span>
           </motion.div>

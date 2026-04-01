@@ -85,7 +85,7 @@ export default function CategoryPage({ category, otherProjects }: CategoryPagePr
                       <p className="text-sm text-[rgba(242,227,213,0.55)]">{project.subtitle}</p>
                     )}
                   </div>
-                  <span className="ml-auto text-[#A65158] self-center shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  <span className="ml-auto text-[#C0707A] self-center shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </motion.div>
             ))}

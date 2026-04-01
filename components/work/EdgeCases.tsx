@@ -24,7 +24,7 @@ const ptComponents = {
   listItem: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
       <li className="flex items-start gap-2 text-[rgba(242,227,213,0.75)] text-sm leading-relaxed">
-        <span className="text-[#A65158] mt-0.5 shrink-0">·</span>
+        <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
         {children}
       </li>
     ),
@@ -82,7 +82,7 @@ export default function EdgeCases({ items }: EdgeCasesProps) {
             {/* Content */}
             <div className="p-6">
               {item.type && (
-                <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#A65158] mb-2 block">
+                <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#C0707A] mb-2 block">
                   {item.type}
                 </span>
               )}

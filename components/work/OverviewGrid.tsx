@@ -89,7 +89,7 @@ export default function OverviewGrid({ project, criticalMoment }: OverviewGridPr
                   key={i}
                   className="flex items-start gap-2 text-sm text-[rgba(242,227,213,0.75)] leading-relaxed"
                 >
-                  <span className="text-[#A65158] mt-0.5 shrink-0">·</span>
+                  <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
                   {c}
                 </li>
               ))}
@@ -129,7 +129,7 @@ export default function OverviewGrid({ project, criticalMoment }: OverviewGridPr
                   key={i}
                   className="flex items-start gap-2 text-sm text-[rgba(242,227,213,0.75)] leading-relaxed"
                 >
-                  <span className="text-[#A65158] mt-0.5 shrink-0">·</span>
+                  <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
                   {item}
                 </li>
               ))}

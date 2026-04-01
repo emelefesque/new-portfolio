@@ -47,7 +47,7 @@ export default function HowIWork() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <span className="text-[#A65158] text-2xl font-serif mb-6 block">
+              <span className="text-[#C0707A] text-2xl font-serif mb-6 block">
                 {p.icon}
               </span>
               <h3 className="font-serif text-lg font-bold text-[#F2E3D5] mb-3 leading-snug">

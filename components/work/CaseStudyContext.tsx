@@ -20,7 +20,7 @@ const ptComponents = {
   listItem: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
       <li className="flex items-start gap-2 text-[rgba(242,227,213,0.8)] text-base leading-relaxed">
-        <span className="text-[#A65158] mt-1 shrink-0">·</span>
+        <span className="text-[#C0707A] mt-1 shrink-0">·</span>
         {children}
       </li>
     ),
