@@ -65,6 +65,7 @@ export default function WorkCategories() {
             >
               <Link
                 href={`/work/${cat.slug}`}
+                aria-label={`See ${cat.title} projects`}
                 className="group block h-full border border-[rgba(242,227,213,0.08)] hover:border-[#A65158] bg-[#0E1826] p-8 transition-colors duration-300"
               >
                 <h3 className="font-serif text-2xl font-bold text-[#F2E3D5] group-hover:text-[#A65158] transition-colors mb-4 leading-snug">
@@ -80,7 +81,7 @@ export default function WorkCategories() {
                     </li>
                   ))}
                 </ul>
-                <span className="inline-block mt-6 text-xs tracking-[0.12em] uppercase text-[#A65158] group-hover:underline">
+                <span className="inline-block mt-6 text-xs tracking-[0.12em] uppercase text-[#C0707A] group-hover:underline">
                   See projects →
                 </span>
               </Link>

@@ -61,6 +61,7 @@ export default function Hero({ bio, resumeUrl }: HeroProps) {
             <a
               href={resumeUrl || "/resume.pdf"}
               download
+              aria-label="Download resume as PDF"
               className="border border-[rgba(242,227,213,0.35)] text-[#F2E3D5] px-7 py-3 text-sm font-medium tracking-wide hover:border-[#A65158] hover:text-[#A65158] transition-colors"
             >
               Download resume

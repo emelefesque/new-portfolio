@@ -28,7 +28,7 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <nav aria-label="Main navigation" className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
@@ -56,6 +56,7 @@ export default function Navbar() {
             className="md:hidden text-[#F2E3D5] p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -64,7 +65,7 @@ export default function Navbar() {
 
       {/* Mobile overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#0D0D0D] flex flex-col items-center justify-center md:hidden">
+        <nav aria-label="Mobile navigation" className="fixed inset-0 z-40 bg-[#0D0D0D] flex flex-col items-center justify-center md:hidden">
           <ul className="flex flex-col items-center gap-10">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -78,7 +79,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       )}
     </>
   );

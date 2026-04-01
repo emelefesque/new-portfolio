@@ -38,7 +38,7 @@ const categoryLabels: Record<string, string> = {
 function GlanceTile({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="border border-[rgba(242,227,213,0.12)] bg-[rgba(14,24,38,0.6)] p-4">
-      <p className="text-[0.6rem] tracking-[0.12em] uppercase text-[#A65158] mb-2">{label}</p>
+      <p className="text-[0.6rem] tracking-[0.12em] uppercase text-[#C0707A] mb-2">{label}</p>
       {children}
     </div>
   );
@@ -73,13 +73,14 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
             >
               <Link
                 href={`/work/${project.slug.current}`}
+                aria-label={`View ${project.title} case study`}
                 className="group grid grid-cols-1 md:grid-cols-2 border border-[rgba(242,227,213,0.08)] hover:border-[#A65158] bg-[#0E1826] transition-colors duration-300 overflow-hidden"
               >
                 {/* Left: text + at a glance */}
                 <div className="p-8 md:p-10 flex flex-col gap-6">
                   <div>
                     {project.category && (
-                      <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#A65158] mb-3 block">
+                      <span className="text-[0.65rem] tracking-[0.12em] uppercase text-[#C0707A] mb-3 block">
                         {categoryLabels[project.category] || project.category}
                       </span>
                     )}
@@ -131,7 +132,7 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
                     )}
                   </div>
 
-                  <span className="text-xs tracking-[0.12em] uppercase text-[#A65158] group-hover:underline mt-auto">
+                  <span className="text-xs tracking-[0.12em] uppercase text-[#C0707A] group-hover:underline mt-auto">
                     View case study →
                   </span>
                 </div>

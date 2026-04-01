@@ -39,7 +39,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #A65158;
+  color: #C0707A;
   display: inline-block;
   margin-bottom: 1rem;
 }
@@ -48,6 +48,39 @@ body {
   border: none;
   border-top: 1px solid rgba(242, 227, 213, 0.12);
   margin: 3rem 0;
+}
+
+/* Skip navigation link */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: #A65158;
+  color: #F2E3D5;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+}
+.skip-nav:focus {
+  top: 1rem;
+}
+
+/* Visible focus indicator for keyboard navigation */
+:focus-visible {
+  outline: 2px solid #A65158;
+  outline-offset: 3px;
+}
+
+/* Reduced motion — disables CSS transitions/animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 ::selection {

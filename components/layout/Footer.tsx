@@ -41,6 +41,7 @@ export default function Footer() {
           <a
             href="/resume.pdf"
             download
+            aria-label="Download resume as PDF"
             className="text-sm border border-[#A65158] text-[#A65158] hover:bg-[#A65158] hover:text-[#F2E3D5] transition-all px-4 py-2 rounded-sm tracking-wide"
           >
             Download resume
