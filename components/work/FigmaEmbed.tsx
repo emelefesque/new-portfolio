@@ -20,7 +20,7 @@ export default function FigmaEmbed({ url }: FigmaEmbedProps) {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <div className="relative w-full aspect-[9/16] sm:aspect-video">
+        <div className="relative w-full h-[480px] sm:h-auto sm:aspect-video">
           <iframe
             src={url}
             className="absolute inset-0 w-full h-full"
