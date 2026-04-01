@@ -29,7 +29,7 @@ export default function Hero({ bio, resumeUrl }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="section-label mb-6">Content Designer</p>
+          <p className="section-label mb-6">Principal Designer | Design and Content Systems</p>
 
           <h1 className="font-serif text-[clamp(3.5rem,10vw,7rem)] font-bold leading-[1.05] text-[#F2E3D5] mb-4">
             Megan
