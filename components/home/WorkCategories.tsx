@@ -18,7 +18,7 @@ const categories = [
     slug: "product-content",
     title: "Product content",
     description: "Design systems that reduce friction, prevent errors, and help people do what they came to do, at scale and across surfaces.",
-    projects: ["Ads duplication", "Meta brand voice"],
+    projects: ["Ads duplication", "Meta brand voice", "GDPR settings"],
     hidden: false,
   },
   {
@@ -26,7 +26,7 @@ const categories = [
     slug: "systems-design",
     title: "Systems design",
     description: "Creating frameworks and governance structures that give teams the confidence to move fast without breaking things.",
-    projects: ["Cross-app transistions", "GDPR response"],
+    projects: ["Meta icon library","Cross-system transitions"],
     hidden: false,
   },
   {
