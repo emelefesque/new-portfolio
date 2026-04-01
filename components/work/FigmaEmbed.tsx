@@ -6,9 +6,10 @@ import Divider from "@/components/ui/Divider";
 
 interface FigmaEmbedProps {
   url: string;
+  projectTitle?: string;
 }
 
-export default function FigmaEmbed({ url }: FigmaEmbedProps) {
+export default function FigmaEmbed({ url, projectTitle }: FigmaEmbedProps) {
   return (
     <section className="max-w-3xl mx-auto px-6">
       <SectionLabel>Prototype</SectionLabel>
@@ -23,6 +24,7 @@ export default function FigmaEmbed({ url }: FigmaEmbedProps) {
         <div className="relative w-full h-[480px] sm:h-auto sm:aspect-video">
           <iframe
             src={url}
+            title={projectTitle ? `Interactive prototype for ${projectTitle}` : "Interactive prototype"}
             className="absolute inset-0 w-full h-full"
             allowFullScreen
           />

@@ -24,7 +24,7 @@ const ptComponents = {
   listItem: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
       <li className="flex items-start gap-2 text-[rgba(242,227,213,0.75)] text-sm leading-relaxed">
-        <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
+        <span className="text-[#C0707A] mt-0.5 shrink-0" aria-hidden="true">·</span>
         {children}
       </li>
     ),
@@ -99,10 +99,12 @@ export default function ImageCarousel({ slides }: ImageCarouselProps) {
           {/* Step counter + arrows */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              {slides.map((_, i) => (
+              {slides.map((s, i) => (
                 <button
                   key={i}
                   onClick={() => go(i)}
+                  aria-label={`Go to slide ${i + 1}${s.title ? `: ${s.title}` : ""}`}
+                  aria-current={i === current ? "true" : undefined}
                   className={`w-2 h-2 rounded-full transition-colors duration-200 ${
                     i === current ? "bg-[#A65158]" : "bg-[rgba(242,227,213,0.2)]"
                   }`}
@@ -117,16 +119,18 @@ export default function ImageCarousel({ slides }: ImageCarouselProps) {
               <button
                 onClick={() => go(current - 1)}
                 disabled={current === 0}
+                aria-label="Previous slide"
                 className="w-8 h-8 flex items-center justify-center border border-[rgba(242,227,213,0.15)] text-[rgba(242,227,213,0.5)] hover:border-[#A65158] hover:text-[#A65158] transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
               >
-                ←
+                <span aria-hidden="true">←</span>
               </button>
               <button
                 onClick={() => go(current + 1)}
                 disabled={current === slides.length - 1}
+                aria-label="Next slide"
                 className="w-8 h-8 flex items-center justify-center border border-[rgba(242,227,213,0.15)] text-[rgba(242,227,213,0.5)] hover:border-[#A65158] hover:text-[#A65158] transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
               >
-                →
+                <span aria-hidden="true">→</span>
               </button>
             </div>
           </div>

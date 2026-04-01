@@ -27,7 +27,7 @@ export default function CategoryPage({ category, otherProjects }: CategoryPagePr
             href="/#work"
             className="text-xs tracking-[0.12em] uppercase text-[rgba(242,227,213,0.4)] hover:text-[#A65158] transition-colors mb-8 inline-block"
           >
-            ← My work
+            <span aria-hidden="true">← </span>My work
           </Link>
           <SectionLabel>{category.title}</SectionLabel>
           {category.description && (
@@ -85,7 +85,7 @@ export default function CategoryPage({ category, otherProjects }: CategoryPagePr
                       <p className="text-sm text-[rgba(242,227,213,0.55)]">{project.subtitle}</p>
                     )}
                   </div>
-                  <span className="ml-auto text-[#C0707A] self-center shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  <span className="ml-auto text-[#C0707A] self-center shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">→</span>
                 </Link>
               </motion.div>
             ))}

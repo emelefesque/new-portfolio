@@ -50,7 +50,7 @@ const components = {
   listItem: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
       <li className="flex items-start gap-2 text-[rgba(242,227,213,0.8)] text-sm leading-relaxed">
-        <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
+        <span className="text-[#C0707A] mt-0.5 shrink-0" aria-hidden="true">·</span>
         {children}
       </li>
     ),

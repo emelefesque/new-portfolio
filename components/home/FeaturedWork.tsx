@@ -89,8 +89,8 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
                     </h3>
                     <div className="flex flex-wrap gap-x-3 gap-y-1 text-[0.7rem] text-[rgba(242,227,213,0.35)] uppercase tracking-wide">
                       {project.company && <span>{project.company}</span>}
-                      {project.role && <span>· {project.role}</span>}
-                      {project.year && <span>· {project.year}</span>}
+                      {project.role && <span><span aria-hidden="true">· </span>{project.role}</span>}
+                      {project.year && <span><span aria-hidden="true">· </span>{project.year}</span>}
                     </div>
                   </div>
 
@@ -106,7 +106,7 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
                         <ul className="space-y-1">
                           {project.challenges.slice(0, 3).map((c, j) => (
                             <li key={j} className="flex items-start gap-1.5 text-xs text-[rgba(242,227,213,0.7)] leading-relaxed">
-                              <span className="text-[#A65158] shrink-0 mt-0.5">·</span>
+                              <span className="text-[#C0707A] shrink-0 mt-0.5" aria-hidden="true">·</span>
                               {c}
                             </li>
                           ))}
@@ -123,7 +123,7 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
                         <ul className="space-y-1">
                           {project.impact.slice(0, 3).map((item, j) => (
                             <li key={j} className="flex items-start gap-1.5 text-xs text-[rgba(242,227,213,0.7)] leading-relaxed">
-                              <span className="text-[#A65158] shrink-0 mt-0.5">·</span>
+                              <span className="text-[#C0707A] shrink-0 mt-0.5" aria-hidden="true">·</span>
                               {item}
                             </li>
                           ))}
@@ -133,7 +133,7 @@ export default function FeaturedWork({ projects }: FeaturedWorkProps) {
                   </div>
 
                   <span className="text-xs tracking-[0.12em] uppercase text-[#C0707A] group-hover:underline mt-auto">
-                    View case study →
+                    View case study <span aria-hidden="true">→</span>
                   </span>
                 </div>
 

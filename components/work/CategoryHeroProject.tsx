@@ -61,7 +61,7 @@ export default function CategoryHeroProject({ project }: CategoryHeroProjectProp
             <ul className="space-y-2">
               {project.impact.slice(0, 3).map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-[rgba(242,227,213,0.7)]">
-                  <span className="text-[#C0707A] shrink-0 mt-px">→</span>
+                  <span className="text-[#C0707A] shrink-0 mt-px" aria-hidden="true">→</span>
                   {item}
                 </li>
               ))}
@@ -73,7 +73,7 @@ export default function CategoryHeroProject({ project }: CategoryHeroProjectProp
           href={`/work/${project.slug.current}`}
           className="inline-block text-sm font-semibold tracking-wide text-[#F2E3D5] border border-[#A65158] px-6 py-3 hover:bg-[#A65158] transition-colors duration-200"
         >
-          See full project →
+          See full project <span aria-hidden="true">→</span>
         </Link>
       </div>
     </motion.div>

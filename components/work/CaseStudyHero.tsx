@@ -34,7 +34,7 @@ export default function CaseStudyHero({ project }: CaseStudyHeroProps) {
             >
               {categoryMap[project.category].label}
             </Link>
-            <span className="text-[rgba(242,227,213,0.3)]">→</span>
+            <span className="text-[rgba(242,227,213,0.3)]" aria-hidden="true">→</span>
             <span className="text-[rgba(242,227,213,0.4)]">{project.title}</span>
           </motion.div>
         )}

@@ -45,7 +45,7 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
                   listItem: {
                     bullet: ({ children }: { children?: React.ReactNode }) => (
                       <li className="flex items-start gap-2 text-[rgba(242,227,213,0.8)] text-lg leading-relaxed">
-                        <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
+                        <span className="text-[#C0707A] mt-0.5 shrink-0" aria-hidden="true">·</span>
                         {children}
                       </li>
                     ),
@@ -111,7 +111,7 @@ export default function ImpactStats({ project }: ImpactStatsProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: i * 0.06 }}
               >
-                <span className="text-[#C0707A] shrink-0 mt-px">·</span>
+                <span className="text-[#C0707A] shrink-0 mt-px" aria-hidden="true">·</span>
                 <span className="text-[rgba(242,227,213,0.75)] text-sm leading-relaxed">
                   {item}
                 </span>

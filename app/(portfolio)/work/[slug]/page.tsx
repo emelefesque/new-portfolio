@@ -158,7 +158,7 @@ export default async function WorkPage({ params }: PageProps) {
       {project.edgeCases && project.edgeCases.length > 0 && (
         <EdgeCases items={project.edgeCases} />
       )}
-      {project.figmaEmbedUrl && <FigmaEmbed url={project.figmaEmbedUrl} />}
+      {project.figmaEmbedUrl && <FigmaEmbed url={project.figmaEmbedUrl} projectTitle={project.title} />}
       <ImpactStats project={project} />
       <CaseStudyReflection
         positioning={project.positioning}
@@ -171,7 +171,7 @@ export default async function WorkPage({ params }: PageProps) {
           href="/#work"
           className="text-sm text-[rgba(242,227,213,0.5)] hover:text-[#A65158] transition-colors"
         >
-          ← Back to all work
+          <span aria-hidden="true">← </span>Back to all work
         </Link>
       </div>
     </article>

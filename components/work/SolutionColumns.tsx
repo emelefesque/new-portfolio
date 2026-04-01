@@ -53,7 +53,7 @@ export default function SolutionColumns({ items }: SolutionColumnsProps) {
                     key={j}
                     className="flex items-start gap-2 text-sm text-[rgba(242,227,213,0.6)] leading-relaxed"
                   >
-                    <span className="text-[#C0707A] mt-0.5 shrink-0">·</span>
+                    <span className="text-[#C0707A] mt-0.5 shrink-0" aria-hidden="true">·</span>
                     {b}
                   </li>
                 ))}

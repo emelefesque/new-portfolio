@@ -77,12 +77,12 @@ export default function WorkCategories() {
                 <ul className="space-y-1 mt-auto">
                   {cat.projects.map((p) => (
                     <li key={p} className="text-xs tracking-wide text-[rgba(242,227,213,0.35)] uppercase">
-                      → {p}
+                      <span aria-hidden="true">→ </span>{p}
                     </li>
                   ))}
                 </ul>
                 <span className="inline-block mt-6 text-xs tracking-[0.12em] uppercase text-[#C0707A] group-hover:underline">
-                  See projects →
+                  See projects <span aria-hidden="true">→</span>
                 </span>
               </Link>
             </motion.div>

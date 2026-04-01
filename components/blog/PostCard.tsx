@@ -53,7 +53,7 @@ export default function PostCard({ post, index = 0 }: PostCardProps) {
             </p>
           )}
           <span className="inline-block mt-3 text-xs text-[#C0707A] tracking-wide group-hover:underline">
-            Read more →
+            Read more <span aria-hidden="true">→</span>
           </span>
         </div>
       </Link>
