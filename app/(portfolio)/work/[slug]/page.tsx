@@ -13,6 +13,7 @@ import ImageCarousel from "@/components/work/ImageCarousel";
 import EdgeCases from "@/components/work/EdgeCases";
 import FigmaEmbed from "@/components/work/FigmaEmbed";
 import CaseStudyReflection from "@/components/work/CaseStudyReflection";
+import LLMRiskFramework from "@/components/LLMRiskFramework";
 import Link from "next/link";
 
 interface PageProps {
@@ -164,6 +165,9 @@ export default async function WorkPage({ params }: PageProps) {
         positioning={project.positioning}
         reflection={project.reflection}
       />
+
+      {/* LLM Risk Framework - only show for content-risk-classification-engine */}
+      {slug === 'content-risk-classification-engine' && <LLMRiskFramework />}
 
       {/* Back link */}
       <div className="max-w-3xl mx-auto px-6 pb-24">
