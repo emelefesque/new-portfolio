@@ -33,9 +33,9 @@ const tiers: TierContent[] = [
       'These guidelines represent absolute floors — requirements that the model must follow in every output, in every context, with no exceptions. They are typically codified in law, enforced by regulators, or tied to binding agreements. Failure here is not a quality issue; it is a compliance and safety failure. These should be embedded as hard guardrails in system prompts, model instructions, and output validation.',
     example: {
       guideline:
-        'A healthcare content standard requires that all AI-generated output include a disclaimer that content is not a substitute for professional medical advice.',
+        'A financial content standard requires that all pages include a disclaimer footer states exactly "Spring Bank is FDIC insured."',
       practice:
-        'When the model responds to any health-related query, it must append a medical disclaimer — regardless of how the user frames the request, and regardless of output length or format. Omitting this in a patient-facing app creates HIPAA and FTC exposure.',
+        'When the model responds to any financial-related query, it must append a financial disclaimer — regardless of how the user frames the request, and regardless of output length or format. Omitting this in a user-facing app creates regulatory exposure and possible monetary liability.',
     },
     colorClass: 'critical',
     accentColor: '#E74C3C',
