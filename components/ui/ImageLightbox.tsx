@@ -31,7 +31,7 @@ export default function ImageLightbox({ src, alt, onClose }: ImageLightboxProps)
         onClick={onClose}
       >
         <motion.div
-          className="relative max-w-5xl w-full"
+          className="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center"
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
@@ -43,7 +43,7 @@ export default function ImageLightbox({ src, alt, onClose }: ImageLightboxProps)
             alt={alt}
             width={1400}
             height={1000}
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", maxHeight: "90vh", objectFit: "contain" }}
             className="border border-[rgba(242,227,213,0.1)]"
           />
           <button
